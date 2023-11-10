@@ -1,10 +1,7 @@
-% Definición de la cerradura
 cerradura(1, 4, 5, 1, 0).
 
-% Regla para calcular la coincidencia
 coincidencia(X, Y, C) :- (X = Y -> C = 1 ; C = 0).
 
-% Regla para verificar la combinación
 verificar(D1, D2, D3, D4, D5, Resultado) :-
     cerradura(C1, C2, C3, C4, C5),
     coincidencia(D1, C1, C1_),
