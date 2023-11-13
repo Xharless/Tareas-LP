@@ -13,5 +13,4 @@ verificar(X1, X2, X3, X4, X5, R) :-
     diferencia(X4, C4, D4),
     diferencia(X5, C5, D5),
     E is (D1 + D2 + D3 + D4 + D5) / 5,
-    (E < 1 -> R = "Cerca" ; R = "Lejos"),
-    (X1 = C1, X2 = C2, X3 = C3, X4 = C4, X5 = C5 -> R = "Contraseña descubierta").
+    (X1 = C1, X2 = C2, X3 = C3, X4 = C4, X5 = C5 -> R = "Contraseña descubierta"; (E < 1 -> R = "Cerca" ; R = "Lejos")).
